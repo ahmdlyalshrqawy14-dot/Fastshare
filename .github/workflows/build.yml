@@ -19,6 +19,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: تجهيز برنامج البناء Gradle
+      uses: gradle/gradle-build-action@v3
+      with:
+        gradle-version: '8.4'
+
     - name: بناء التطبيق
       run: gradle assembleDebug
 
